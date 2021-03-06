@@ -1,0 +1,554 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to Build Brainhack Jupyter Book in your Local &#8212; Everything Brainhack: past, present and future</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.37f24b989f4638ff9c27c22dc7559d4f.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/brainhack-logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Everything Brainhack: past, present and future</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Brainhack Book
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Evolving Brainhack Book
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="evolution_of_brainhack.html">
+   Brainhack Cartography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Brainhack Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributors.html">
+   Contributors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgments.html">
+   Acknowledgments
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Preprint
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="preprint_manuscript.html">
+   Preprint Manuscript
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="preprint_figure.html">
+   Preprint Figure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="preprint_contributors.html">
+   Preprint Contributors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="preprint_acknowledgments.html">
+   Preprint Acknowledgments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="preprint_authorship-agreement.html">
+   Authorship Agreement
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/build_in_local_guideline.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/brainhackorg/brainhack_jupyter_book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/brainhackorg/brainhack_jupyter_book/issues/new?title=Issue%20on%20page%20%2Fbuild_in_local_guideline.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requirements">
+   Requirements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-by-step-guideline-for-building-the-brainhack-book-at-your-local">
+   Step by Step Guideline for Building the Brainhack Book at your Local
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-fork-the-brainhack-jupyter-book-repository-to-your-github-account">
+     Step 1:  Fork the Brainhack Jupyter Book repository to your Github account
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-clone-your-forked-brainhack-jupyter-book-repository-to-your-machine-computer">
+     Step 2: Clone your forked  Brainhack Jupyter Book repository to your machine/computer.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-synchronize-your-master-branch-with-the-upstream-master-branch">
+     Step 3: Synchronize your master branch with the upstream master branch:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-4-build-the-book-at-your-local">
+     Step 4: Build the book at your local
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-5-create-and-activate-a-virtual-environment">
+     Step 5: Create and activate a virtual environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-6-install-jupyter-book-package">
+     Step 6: install jupyter-book package
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-7-build-the-html-files-to-deploy-with-jupyter-book">
+     Step 7: build the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       html
+      </span>
+     </code>
+     files to deploy with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       jupyter-book
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-9-compile-pages-that-need-markdown-tables">
+     Step 9: Compile pages that need markdown tables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-10-build-the-pages-with-markdown-table">
+     Step 10: Build the pages with markdown table:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-11-cleaning-your-local-directory">
+     Step 11: Cleaning your local directory
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-12-contributing-to-the-brainhack-book">
+     Step 12: Contributing to the Brainhack Book
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="how-to-build-brainhack-jupyter-book-in-your-local">
+<h1>How to Build Brainhack Jupyter Book in your Local<a class="headerlink" href="#how-to-build-brainhack-jupyter-book-in-your-local" title="Permalink to this headline">¶</a></h1>
+<p>The Brainhack book is build with <a class="reference external" href="https://pypi.org/project/jupyter-book/">jupyter-book</a> package which helps with creating on-line book version of one of <a class="reference external" href="https://github.com/brainhackorg/brainhack_jupyter_book">Brainhack Book</a>.</p>
+<p>If you are interested in building your own Jupyterbook from scratch you might either follow the instructions from the <a class="reference external" href="https://jupyterbook.org/intro">Jupyter book package</a> or follow an excellent summry written by <a class="reference external" href="https://github.com/pabloinsente/jupyter-book-tutorial">&#64;pabloinsente</a>. Here we provide a quick summary of the instructions on building the Brainhack book quickly at your local and then start contributing into this exciting project!</p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>Before start, you might need to have these listed below ready for building your book.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.python.org/downloads/">A python 3.6 or 3.7</a></p></li>
+<li><p><a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">git</a></p></li>
+<li><p>If you are a Windows user for Unix commands and build functions to work properly you might either need</p>
+<ul>
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Linux Subsystem for Windows</a>,</p></li>
+<li><p><a class="reference external" href="https://gitforwindows.org/">Gitbash</a>,</p></li>
+<li><p><a class="reference external" href="https://www.cygwin.com/">Cywin</a></p></li>
+</ul>
+</li>
+</ul>
+<p>For other requirements please have a look at our <a class="reference external" href="https://github.com/brainhackorg/brainhack_jupyter_book/blob/main/requirements.txt">requirements.txt</a></p>
+</div>
+<div class="section" id="step-by-step-guideline-for-building-the-brainhack-book-at-your-local">
+<h2>Step by Step Guideline for Building the Brainhack Book at your Local<a class="headerlink" href="#step-by-step-guideline-for-building-the-brainhack-book-at-your-local" title="Permalink to this headline">¶</a></h2>
+<p>Now, we will create the Brainhack book using the command line, step-by-step.</p>
+<div class="section" id="step-1-fork-the-brainhack-jupyter-book-repository-to-your-github-account">
+<h3>Step 1:  <a class="reference external" href="https://help.github.com/articles/fork-a-repo">Fork</a> the <a class="reference external" href="https://github.com/brainhackorg/brainhack_jupyter_book">Brainhack Jupyter Book repository</a> to your Github account<a class="headerlink" href="#step-1-fork-the-brainhack-jupyter-book-repository-to-your-github-account" title="Permalink to this headline">¶</a></h3>
+<p>Click on the ‘Fork’ button near the top of the page. This creates a copy of the code under your account on GitHub. For more details on how to fork a repository see <a class="reference external" href="https://help.github.com/articles/fork-a-repo/">this guide</a>. This is now your own unique copy of the  Brainhack Jupyter Book. Changes here won’t affect anyone else’s work, so it’s a safe space to explore edits to the code!
+Make sure to <a class="reference external" href="https://help.github.com/articles/syncing-a-fork">keep your fork up to date</a> with the master repository, otherwise, you can end up with lots of dreaded <a class="reference external" href="https://help.github.com/articles/syncing-a-fork">merge conflicts</a>.</p>
+</div>
+<div class="section" id="step-2-clone-your-forked-brainhack-jupyter-book-repository-to-your-machine-computer">
+<h3>Step 2: <a class="reference external" href="https://help.github.com/articles/cloning-a-repository">Clone</a> your forked  Brainhack Jupyter Book repository to your machine/computer.<a class="headerlink" href="#step-2-clone-your-forked-brainhack-jupyter-book-repository-to-your-machine-computer" title="Permalink to this headline">¶</a></h3>
+<p>While you can edit files <a class="reference external" href="https://help.github.com/articles/editing-files-in-your-repository">directly on Github</a>, sometimes the changes you want to make will be complex and you will want to use a <a class="reference external" href="https://en.wikipedia.org/wiki/Text_editor">text editor</a> that you have installed on your local machine/computer. (One great text editor is <a class="reference external" href="https://code.visualstudio.com/">vscode</a>).
+In order to work on the code locally, you must clone your forked repository.
+To keep up with the changes in the  Brainhack Jupyter Book repository, add the <a class="reference external" href="https://help.github.com/articles/configuring-a-remote-for-a-fork">Brainhack Jupyter Book repository</a>as a remote to your locally cloned repository.</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">add</span> <span class="pre">upstream</span> <span class="pre">https://github.com/brainhack_jupyter_book/…...git</span></code></p>
+<p>Make sure to <a class="reference external" href="https://help.github.com/articles/syncing-a-fork/">keep your fork up to date</a> with the upstream repository.
+For example, to update your master branch on your local cloned repository:</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">upstream</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">master</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">upstream/master</span></code></p>
+</div>
+<div class="section" id="step-3-synchronize-your-master-branch-with-the-upstream-master-branch">
+<h3>Step 3: Synchronize your master branch with the upstream master branch:<a class="headerlink" href="#step-3-synchronize-your-master-branch-with-the-upstream-master-branch" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">master</span></code>
+<code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">pull</span> <span class="pre">upstream</span> <span class="pre">master</span></code></p>
+</div>
+<div class="section" id="step-4-build-the-book-at-your-local">
+<h3>Step 4: Build the book at your local<a class="headerlink" href="#step-4-build-the-book-at-your-local" title="Permalink to this headline">¶</a></h3>
+<p>Open the terminal and navigate to the folder where you cloned the Brainhack Jupyter book by:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ../brainhack_jupyter_book/
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-5-create-and-activate-a-virtual-environment">
+<h3>Step 5: Create and activate a virtual environment<a class="headerlink" href="#step-5-create-and-activate-a-virtual-environment" title="Permalink to this headline">¶</a></h3>
+<p>It is always a good idea to create a virtual environment to isolate your dependencies for each project. This is not strictly required, yet highly recommended. Make sure you are in the <code class="docutils literal notranslate"><span class="pre">/brainhack_jupyter_book</span></code> directory in your terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /brainhack_jupyter_book/
+</pre></div>
+</div>
+<p>Once there, run this in the terminal to create the virtual environment following the 3 options below based on your operating system or choice:</p>
+<div class="highlight-python= notranslate"><div class="highlight"><pre><span></span>
+# create an virtual environment in your local copy and install related libraries with conda
+
+conda env create -f environment.yml --prefix ./envs
+conda activate ./envs
+ 
+ 
+# This line creates a virtual environment called &#39;venv&#39;
+python3 -m venv venv 
+# This line activates the virtual environment On macOS and Linux:
+source venv/bin/activate 
+
+# This line activates the virtual environment On Windows
+
+source venv/bin/activate 
+or 
+.\env\Scripts\activate
+
+# You can confirm you’re in the virtual environment by checking the location of your Python interpreter, it should point to the env directory. On macOS and Linux:
+
+which python
+.../env/bin/python
+
+#On Windows:
+
+where python
+.../env/bin/python.exe
+
+#Leaving the virtual environment. If you want to switch projects or otherwise leave your virtual environment, simply run:
+
+deactivate
+
+</pre></div>
+</div>
+<p>Once the virtual environment is activated, packages will be installed in that environment, without interfering with your python system installation.</p>
+<p><strong>HEADS UP</strong>: if you close the terminal or deactivate <code class="docutils literal notranslate"><span class="pre">venv</span></code>, make sure to re-activate the virtual environment with <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">venv/bin/activate</span></code> before typing any code.</p>
+</div>
+<div class="section" id="step-6-install-jupyter-book-package">
+<h3>Step 6: install jupyter-book package<a class="headerlink" href="#step-6-install-jupyter-book-package" title="Permalink to this headline">¶</a></h3>
+<p>The jupyter-book package can be pip-installed like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span>
+</pre></div>
+</div>
+<p>Now, if you run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip list <span class="p">|</span> grep jupyter-book
+</pre></div>
+</div>
+<p>You should see something like this (version may change) printed to the terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book       <span class="m">0</span>.8
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-7-build-the-html-files-to-deploy-with-jupyter-book">
+<h3>Step 7: build the <code class="docutils literal notranslate"><span class="pre">html</span></code> files to deploy with <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code><a class="headerlink" href="#step-7-build-the-html-files-to-deploy-with-jupyter-book" title="Permalink to this headline">¶</a></h3>
+<p>Everything is in place now. The last step before deploying the Brainhack Book site at your local is to build the <code class="docutils literal notranslate"><span class="pre">html</span></code> files like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build my-book/
+</pre></div>
+</div>
+<p>If successful, the terminal should print something like:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">================================================================================</span>
+
+
+Generated <span class="m">5</span> new files
+Skipped <span class="m">0</span> already-built files
+Your Jupyter Book is now <span class="k">in</span> <span class="sb">`</span>_build/<span class="sb">`</span>.
+Demo your Jupyter book with <span class="sb">`</span>make serve<span class="sb">`</span> or push to GitHub!
+
+
+<span class="o">================================================================================</span>
+</pre></div>
+</div>
+<p>or you can test your site locally by navigating into your book and running</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">serve</span></code></p>
+<p>or</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">book</span></code></p>
+</div>
+<div class="section" id="step-9-compile-pages-that-need-markdown-tables">
+<h3>Step 9: Compile pages that need markdown tables<a class="headerlink" href="#step-9-compile-pages-that-need-markdown-tables" title="Permalink to this headline">¶</a></h3>
+<p>Some information is generated from spreadsheets in data or files downloaded from <a class="reference external" href="https://osf.io/utz4d/">OSF</a> during the website building process. Currently they are the acknowledgements and contributors pages.</p>
+<p>Spreadsheets for acknowledgements is stored in data but the contributor list is on OSF.</p>
+<p>Download contributor list from <a class="reference external" href="https://osf.io/utz4d/">OSF</a>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">contributors</span></code></p>
+</div>
+<div class="section" id="step-10-build-the-pages-with-markdown-table">
+<h3>Step 10: Build the pages with markdown table:<a class="headerlink" href="#step-10-build-the-pages-with-markdown-table" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">brainhack_jupyter_book/mdtable.py</span></code> [see options in the script]</p>
+<p>or use stuff in <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>:</p>
+<div class="highlight-make notranslate"><div class="highlight"><pre><span></span>make bookpage  # jupyter book related pages 
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-11-cleaning-your-local-directory">
+<h3>Step 11: Cleaning your local directory<a class="headerlink" href="#step-11-cleaning-your-local-directory" title="Permalink to this headline">¶</a></h3>
+<p>There’s a make command to sweap all the files related to the local build that are not needed in the repo:</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code></p>
+</div>
+<div class="section" id="step-12-contributing-to-the-brainhack-book">
+<h3>Step 12: Contributing to the Brainhack Book<a class="headerlink" href="#step-12-contributing-to-the-brainhack-book" title="Permalink to this headline">¶</a></h3>
+<p>You may want to add some content to the Book either by modifying the files by maintaining the same structure, or adding new elements.</p>
+<ol class="simple">
+<li><p>add the changes to the Brainhack book’s local repo</p></li>
+<li><p>rebuild the site running <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">my-book/</span></code> again</p></li>
+<li><p>push the changes to GitHub and request review from others.</p></li>
+</ol>
+<p>Please look check the <a class="reference external" href="https://docs.google.com/document/d/1IhMQSPZOBYOrJ1yd0_K0Uvd4vq0NyyZbknJav5DPArI/edit">contribution guidelines</a> for more information regarding how to make contributions and PR to the repo.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Brainhack community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
